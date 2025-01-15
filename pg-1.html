@@ -14,6 +14,7 @@
             padding: 0;
             background-color: #945a5a;
             color: #333;
+            overflow-x: hidden;
         }
 
         header {
@@ -72,7 +73,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 100%;
             margin: 20px auto;
             padding: 20px;
             background: #f3d7d7;
@@ -87,7 +88,7 @@
         .section h2 {
             font-size: 2.5em;
             text-align: center;
-            color: #d83473 ;
+            color: #d83473;
             font-family: 'Dancing Script', cursive;
         }
 
@@ -144,7 +145,7 @@
         .rsvp-form label {
             font-size: 1.2em;
             margin-bottom: 5px;
-            color: #ee1d69 ;
+            color: #ee1d69;
         }
 
         .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
@@ -165,7 +166,7 @@
         }
 
         .rsvp-form button {
-            background-color: #ee1d69 ;
+            background-color: #ee1d69;
             color: #fff;
             border: none;
             padding: 15px 30px;
@@ -200,24 +201,87 @@
             background-color: #d88780;
             color: #fff;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+
+            header p {
+                font-size: 1.5em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav a {
+                font-size: 1em;
+                padding: 12px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .photo-gallery img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+                max-width: 100%;
+            }
+
+            .rsvp-form button {
+                width: 100%;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .container {
+                padding: 5px;
+            }
+
+            .section h2 {
+                font-size: 1.8em;
+            }
+
+            .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+                padding: 12px;
+                font-size: 1em;
+            }
+
+            .rsvp-form button {
+                font-size: 1em;
+            }
+        }
     </style>
-    
 </head>
 <body>
     
     <audio autoplay loop style="display: none;">
         <source src="background-music.mp3" type="audio/mp3">
     </audio>
-    <script>
-        function startMusicAndRedirect() {
-            const music = document.getElementById('backgroundMusic');
-            music.play(); // Play the music
-            setTimeout(() => {
-                window.location.href = "pg-1.html"; // Redirect after a short delay
-            }, 500); // Adjust delay as needed (500ms = 0.5 seconds)
-        }
-    </script>
-
+    
     <nav>
         <div class="logo">
             <img src="logo.png" alt="Logo">
@@ -232,7 +296,7 @@
 
     <header id="home">
         <h1>Zin Min Paing & Hinn Yu Hlaing</h1>
-        <p>W're getting married!!</p>
+        <p>We're getting married!!</p>
     </header>
 
     <div class="container">
@@ -280,26 +344,26 @@
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
                 <label for="whatsapp">Whatsapp Number</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Eg. 6287883837740" required>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Eg. 6287883837740" required>
 
-            <label for="attendance">Attendance Confirmation</label>
-            <select id="attendance" name="attendance" required>
-                <option value="" disabled selected>Choose an option</option>
-                <option value="accept">Accept with Pleasure</option>
-                <option value="decline">Decline with Regret</option>
-            </select>
+                <label for="attendance">Attendance Confirmation</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="accept">Accept with Pleasure</option>
+                    <option value="decline">Decline with Regret</option>
+                </select>
 
-            <div class="radio-group">
-                <label>Number of Guests</label>
-                <input type="radio" id="guest1" name="guests" value="1" required>
-                <label for="guest1">1</label><br>
-            
-                <input type="radio" id="guest2" name="guests" value="2">
-                <label for="guest2">2</label><br>
-            
-                <input type="radio" id="guest3" name="guests" value="3">
-                <label for="guest3">3</label><br>
-            </div>
+                <div class="radio-group">
+                    <label>Number of Guests</label>
+                    <input type="radio" id="guest1" name="guests" value="1" required>
+                    <label for="guest1">1</label><br>
+                
+                    <input type="radio" id="guest2" name="guests" value="2">
+                    <label for="guest2">2</label><br>
+                
+                    <input type="radio" id="guest3" name="guests" value="3">
+                    <label for="guest3">3</label><br>
+                </div>
 
                 <label for="message">Message (optional)</label>
                 <textarea id="message" name="message" placeholder="Leave a message or special request"></textarea>

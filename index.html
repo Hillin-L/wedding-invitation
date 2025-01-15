@@ -1,103 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="pg-1.html">
     <link rel="icon" href="logo.png" type="image/icon type">
-        <style>
-            html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    background-color: #ffc0cb; /* Pink background outside the content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background: url('groom-bride.jpg') no-repeat center center/cover;
-    height: 90vh; /* Adjusted height to allow space for pink border */
-    width: 200vh; /* Adjusted width to keep balance */
-    border: 8px solid #fff; /* Subtle white border to separate background */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Slight shadow for a lifted effect */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    border-radius: 15px; /* Rounded edges for a softer look */
-}
+        html, body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #ffc0cb; /* Pink background outside the content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 15px; /* Matches the border-radius of the header */
-}
+        header {
+            background: url('groom-bride.jpg') no-repeat center center/cover;
+            height: 90vh; /* Relative to viewport height */
+            width: 90vw; /* Relative to viewport width */
+            max-width: 1200px; /* Limit maximum width on larger screens */
+            border: 8px solid #fff; /* Subtle white border to separate background */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Slight shadow for a lifted effect */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            border-radius: 15px; /* Rounded edges for a softer look */
+        }
 
-.content {
-    color: #fff;
-}
+        .overlay {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 15px; /* Matches the border-radius of the header */
+        }
 
-.content h1 {
-    font-size: 3em;
-    margin: 0 0 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
+        .content {
+            color: #fff;
+        }
 
-.content p {
-    font-size: 1.5em;
-    margin: 0 0 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
+        .content h1 {
+            font-size: 2.5em;
+            margin: 0 0 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
 
-.content button {
-    padding: 15px 30px;
-    font-size: 1em;
-    color: #d88780;
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+        .content p {
+            font-size: 1.2em;
+            margin: 0 0 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
 
-.content button:hover {
-    background-color: #d88780;
-    color: #fff;
-}
+        .content button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #d88780;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-        </style>
-    </head>
-    <body>
-        <header>
-            <div class="overlay">
-                <div class="content">
-                    <h1>Welcome to Our Special Day</h1>
-                    <p>Thank you for being part of this memorable journey with us.</p>
-                    <p>click it to know more detail</p>
-                    <button onclick="window.location.href='pg-1.html'" >Open Invitation</button>
-                </div>
-            </div>
-        </header>
+        .content button:hover {
+            background-color: #d88780;
+            color: #fff;
+        }
 
-        <!-- <script>
-            function openInvitation() {
-                window.location.href = "invitation.html"; // Replace with the actual invitation URL
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                height: 80vh; /* Reduce height on smaller screens */
+                width: 95vw; /* Slightly smaller width */
             }
-        </script> -->
-        
-    </body>
+
+            .content h1 {
+                font-size: 2em; /* Smaller font size for headings */
+            }
+
+            .content p {
+                font-size: 1em; /* Smaller font size for paragraphs */
+            }
+
+            .content button {
+                padding: 8px 16px; /* Adjust button size */
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                height: 75vh; /* Further reduce height for small phones */
+            }
+
+            .content h1 {
+                font-size: 1.8em; /* Smaller heading size */
+            }
+
+            .content p {
+                font-size: 0.9em; /* Smaller paragraph size */
+            }
+
+            .content button {
+                padding: 6px 12px; /* Adjust button size */
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <div class="content">
+                <h1>Welcome to Our Special Day</h1>
+                <p>Thank you for being part of this memorable journey with us.</p>
+                <p>Click it to know more details</p>
+                <button onclick="window.location.href='pg-1.html'">Open Invitation</button>
+            </div>
+        </div>
+    </header>
+</body>
 </html>
