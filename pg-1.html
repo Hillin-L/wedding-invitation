@@ -23,6 +23,10 @@
             text-align: center;
             padding: 100px 20px;
             font-family: 'Dancing Script', cursive;
+            height: 100vh; /* Ensure full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         header h1 {
@@ -38,6 +42,7 @@
 
         nav {
             background-color: #d88780;
+            width: 100%; /* Ensure full width */
             display: flex;
             justify-content: space-between; /* Adjust spacing */
             align-items: center; /* Align vertically */
@@ -298,21 +303,22 @@
     </style>
 </head>
 <body>
-    
     <audio autoplay loop style="display: none;">
         <source src="background-music.mp3" type="audio/mp3">
     </audio>
-    
+
     <nav>
         <div class="logo">
             <img src="logo.png" alt="Logo">
             <span>Wedding Invitation</span>
         </div>
-        
-        <a href="index.html">Home</a>
-        <a href="#details">Details</a>
-        <a href="#location">Location</a>
-        <a href="#rsvp">RSVP</a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
     </nav>
 
     <header id="home">
