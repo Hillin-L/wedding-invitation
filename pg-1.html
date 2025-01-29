@@ -25,7 +25,7 @@
         
         header {
             background: url('groom-bride.jpg') no-repeat center center/cover;
-            height: 90vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -78,7 +78,7 @@
             color: white;
             text-decoration: none;
             font-size: 1em;
-            padding: 15px 5px;
+            padding: 15px ;
         }
         
         .container {
@@ -95,7 +95,64 @@
             color: #d83473;
             font-family: 'Dancing Script', cursive;
         }
-        
+        /* Our Story Section */
+        .story-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            color: #010c16;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+
+/* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+
         iframe {
             width: 100%;
             height: 300px;
@@ -110,10 +167,34 @@
             border: 1px solid #ccc;
         }
         
+        .guest-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        .pp {
+            font-size: 1.5em;
+            color: #d83473;
+            font-family: optima;
+            
+        }
+        .guest-options label {
+            display: flex;
+            align-items: center;
+            font-size: 1.4em;
+            color: #333;
+        }
+
+        .guest-options input {
+            margin-right: 5px;
+        }
+
         .rsvp-form button {
             background-color: #ee1d69;
             color: white;
             border: none;
+            border-radius: 5px;
             padding: 10px 20px;
             font-size: 1.2em;
             cursor: pointer;
@@ -136,7 +217,7 @@
         <div class="nav-left">
             <div class="logo">
                 <img src="logo.png" alt="Logo">
-                <span>Wedding Invitation</span>
+                <span><a href="index.html" >Wedding Invitation</a></span>
             </div>
         </div>
         <a href="#home">Home</a>
@@ -147,20 +228,53 @@
     
 
     <header id="home">
-        <h1>Zin Min Paing & Hinn Yu Hlaing</h1>
+        <h1>Zin Min Paing <br>
+            & <br>
+            Hinn Yu Hlaing</h1>
         <p>We're getting married!!</p>
     </header> 
 
     <div class="container">
         <div class="section" id="details">
-            <h2>The Details</h2>
-            <p><strong>Date:</strong> Saturday, February 15, 2025</p>
-            <p><strong>Time:</strong> 3:00 PM</p>
+            <h2>The Details</h2><br>
+            <p><strong>Date:</strong> Saturday, February 15, 2025</p><br>
+            <p><strong>Time:</strong> 3:00 PM</p><br>
             <p><strong>Venue:</strong> 165 Tanjong Pagar Road, Singapore</p>
         </div>
-        
+        <br>
+
+        <div class="container">
+            <div class="section" id="our-story">
+                <h2>Our Story</h2>
+                <p class="story-text">
+                    It all started in 2020 when fate brought us together at a cozy little coffee shop. 
+                    What began as a simple conversation over lattes quickly turned into endless laughter, deep conversations, and an undeniable connection. 
+                    With happy tears and a heart full of love, she said YES! Now, as we step into this new chapter of our lives, we are beyond excited to celebrate our love with the people who mean the most to us—our beloved family and friends. 
+                    Thank you for being a part of our journey. We can't wait to celebrate with you!
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="section" id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Our Moment 1" class="gallery-item">
+                <img src="photo2.jpg" alt="Our Moment 2" class="gallery-item">
+                <img src="photo3.jpg" alt="Our Moment 3" class="gallery-item">
+                <img src="photo4.jpg" alt="Our Moment 4" class="gallery-item">
+                <img src="photo5.jpg" alt="Our Moment 5" class="gallery-item">
+            </div>
+        </div>
+    
+    
+    <!-- Lightbox for Enlarged Image -->
+        <div class="lightbox" id="lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-img" id="lightbox-img">
+        </div>
+        <br>
         <div class="section" id="location">
-            <h2>Location</h2>
+            <h2>Location</h2><br>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.827970687061!2d103.8435173!3d1.2766279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da196cc3c073e9%3A0xd45ff7133373f1e0!2sTg%20Pagar%20Rd%2C%20Singapore!5e0!3m2!1sen!2smm!4v1736821327248!5m2!1sen!2smm" loading="lazy"></iframe>
         </div>
 
@@ -168,14 +282,25 @@
             <h2>RSVP</h2>
             <form class="rsvp-form" action="mailto:example@gmail.com" method="POST" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
+
                 <input type="tel" name="whatsapp" placeholder="Whatsapp Number" required>
+
                 <select name="attendance" required>
                     <option value="" disabled selected>Will you attend?</option>
                     <option value="accept">Accept with Pleasure</option>
                     <option value="decline">Decline with Regret</option>
                 </select>
-                <textarea name="message" placeholder="Leave a message or special request"></textarea>
-                <button type="submit">Submit</button>
+                
+                <div class="pp"><label>How many people will come?</label></div>
+                    <div class="guest-options">
+                        <label><input type="radio" name="guests" value="1" required> 1</label>
+                        <label><input type="radio" name="guests" value="2"> 2</label>
+                        <label><input type="radio" name="guests" value="3"> 3</label>
+                        <label><input type="radio" name="guests" value="4"> 4</label>
+                    </div>
+                    
+                <textarea name="message" placeholder="Leave a Wedding wishes"></textarea>
+                <button type="submit">Send</button>
             </form>
         </div>
     </div>
