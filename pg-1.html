@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z&H Wedding Invitation</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.png" type="image/icon type">
-
+    <link rel="icon" href="logo.png" type="image/png">
     <style>
         body {
             font-family: 'Playfair Display', serif;
@@ -15,92 +15,63 @@
             padding: 0;
             background-color: #945a5a;
             color: #333;
-            /* overflow-x: hidden; */
-            /* text-align: center; */
+            overflow-x: hidden;
+            text-align: center;
         }
-
+        
         header {
             background: url('groom-bride.jpg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
+            color: white;
             padding: 15vh 10px;
             font-family: 'Dancing Script', cursive;
-            height: 100vh; /* Ensure full screen height */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         header h1 {
             font-size: 3em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        header p {
-            font-size: 1.8em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         nav {
-            background-color: #d88780;
-            width: 100%; /* Ensure full width */
-            display: flex;
-            justify-content: space-between; /* Adjust spacing */
-            align-items: center; /* Align vertically */
-            padding: 10px ; /* Add padding */
+            background: #d88780;
+            padding: 10px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* gap: 15px; */
-        }
-
-        nav ul {
             display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            justify-content: center;
+            gap: 15px;
         }
-
-        nav ul li {
-            margin: 0 15px; /* Adjust spacing between items */
-        }
-
+        
         nav a {
-            text-decoration: none;
             color: white;
+            text-decoration: none;
             font-size: 1.2em;
-            font-weight: bold;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
+            padding: 10px;
+            transition: 0.3s;
         }
-
+        
         nav a:hover {
-            background-color: #dba09a;
+            background: #dba09a;
             border-radius: 5px;
         }
 
-        nav .logo {
+        .nav-left {
             display: flex;
             align-items: center;
         }
-
-        nav .logo img {
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .logo img {
             height: 40px;
             margin-right: 10px;
         }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: nowrap; /* Prevent wrapping */
-            }
-
-            nav ul {
-                flex-direction: row; /* Ensure horizontal layout */
-            }
-        }
-
+        
+        
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -109,163 +80,39 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
+        
         .section h2 {
             font-size: 2.5em;
-            text-align: center;
             color: #d83473;
             font-family: 'Dancing Script', cursive;
         }
 
-        .section p {
-            font-size: 1.2em;
-            line-height: 1.8;
-        }
-
-        .section img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .rsvp-form {
-            margin-top: 20px;
-            margin: 10px 0;
+        .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
             width: 100%;
             padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .rsvp-form label {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            color: #ee1d69;
-        }
-
-        .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
-            margin-bottom: 15px;
-            padding: 15px;
-            width: 100%;
-            max-width: 500px;
-            border: 1px solid #ccc;
+            margin: 10px 0;
             border-radius: 5px;
-            font-size: 1.1em;
-            background-color: #f9f9f9;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
         }
-
-        .rsvp-form textarea {
-            resize: none;
-            height: 100px;
-        }
-
+        
         .rsvp-form button {
             background-color: #ee1d69;
-            color: #fff;
+            color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 10px 20px;
             font-size: 1.2em;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
+            transition: 0.3s;
         }
 
         .rsvp-form button:hover {
-            background-color: #d65b49;
+            background: #d65b49;
         }
-
-        .radio-group {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        .radio-group input {
-            margin-right: 10px;
-        }
-
-        .radio-group label {
-            display: inline-block;
-            margin: 5px 0;
-        }
-
+        
         footer {
-            text-align: center;
-            margin-top: 10px;
-            padding: 20px;
-            background-color: #d88780;
-            color: #fff;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: nowrap; /* Prevent wrapping */
-            }
-
-            nav ul {
-                flex-direction: row; /* Ensure horizontal layout */
-            }
-
-            header h1 {
-                font-size: 2.8em;
-            }
-
-            header p {
-                font-size: 1.5em;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .section h2 {
-                font-size: 2em;
-            }
-
-            .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
-                max-width: 100%;
-            }
-
-            .rsvp-form button {
-                width: 100%;
-            }
-
-            footer {
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-
-            header p {
-                font-size: 1.2em;
-            }
-
-            .container {
-                padding: 5px;
-            }
-
-            .section h2 {
-                font-size: 1.8em;
-            }
-
-            .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
-                padding: 12px;
-                font-size: 1em;
-            }
-
-            .rsvp-form button {
-                font-size: 1em;
-            }
+            background: #d88780;
+            padding: 10px;
+            color: white;
         }
     </style>
 </head>
@@ -274,20 +121,21 @@
         <source src="background-music.mp3" type="audio/mp3">
     </audio>
 
+
     <nav>
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-            <span>Wedding Invitation</span>
+        <div class="nav-left">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                <span>Wedding Invitation</span>
+            </div>
         </div>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#details">Details</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#rsvp">RSVP</a></li>
-        </ul>
+        <a href="#home">Home</a>
+        <a href="#details">Details</a>
+        <a href="#location">Location</a>
+        <a href="#rsvp">RSVP</a>
     </nav>
-
+    
     <header id="home">
         <h1>Zin Min Paing & Hinn Yu Hlaing</h1>
         <p>We're getting married!!</p>
@@ -298,49 +146,25 @@
             <h2>The Details</h2>
             <p><strong>Date:</strong> Saturday, February 15, 2025</p>
             <p><strong>Time:</strong> 3:00 PM</p>
-            <p><strong>Venue:</strong> 165 Tanjong Pagar Road Singapore</p>
-            <img src="wedding-venue.jpg" alt="Wedding Venue">
+            <p><strong>Venue:</strong> 165 Tanjong Pagar Road, Singapore</p>
         </div>
-
+        
         <div class="section" id="location">
             <h2>Location</h2>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.827970687061!2d103.8435173!3d1.2766279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da196cc3c073e9%3A0xd45ff7133373f1e0!2sTg%20Pagar%20Rd%2C%20Singapore!5e0!3m2!1sen!2smm!4v1736821327248!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.827970687061!2d103.8435173!3d1.2766279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da196cc3c073e9%3A0xd45ff7133373f1e0!2sTg%20Pagar%20Rd%2C%20Singapore!5e0!3m2!1sen!2smm!4v1736821327248!5m2!1sen!2smm" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="section" id="rsvp">
             <h2>RSVP</h2>
-            <p>Please let us know if you can join our special day. Fill out the form below:</p>
             <form class="rsvp-form" action="mailto:example@gmail.com" method="POST" enctype="text/plain">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-                <label for="whatsapp">Whatsapp Number</label>
-                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Eg. 6287883837740" required>
-
-                <label for="attendance">Attendance Confirmation</label>
-                <select id="attendance" name="attendance" required>
-                    <option value="" disabled selected>Choose an option</option>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="whatsapp" placeholder="Whatsapp Number" required>
+                <select name="attendance" required>
+                    <option value="" disabled selected>Will you attend?</option>
                     <option value="accept">Accept with Pleasure</option>
                     <option value="decline">Decline with Regret</option>
                 </select>
-
-                <div class="radio-group">
-                    <label>Number of Guests</label>
-                    <input type="radio" id="guest1" name="guests" value="1" required>
-                    <label for="guest1">1</label><br>
-
-                    <input type="radio" id="guest2" name="guests" value="2">
-                    <label for="guest2">2</label><br>
-
-                    <input type="radio" id="guest3" name="guests" value="3">
-                    <label for="guest3">3</label><br>
-                </div>
-
-                <label for="message">Message (optional)</label>
-                <textarea id="message" name="message" placeholder="Leave a message or special request"></textarea>
-
+                <textarea name="message" placeholder="Leave a message or special request"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
