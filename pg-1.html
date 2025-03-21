@@ -280,10 +280,9 @@
 
         <div class="section" id="rsvp">
             <h2>RSVP</h2>
-            <form class="rsvp-form" action="linlettyati1@gmail.com" method="POST" enctype="text/plain">
+            <form class="rsvp-form" action="https://api.web3forms.com/submit" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
 
-                <input type="tel" name="whatsapp" placeholder="Whatsapp Number" required>
 
                 <select name="attendance" required>
                     <option value="" disabled selected>Will you attend?</option>
@@ -298,7 +297,7 @@
                         <label><input type="radio" name="guests" value="3"> 3</label>
                         <label><input type="radio" name="guests" value="4"> 4</label>
                     </div>
-                    
+                <input type="hidden" name="access_key" value="a9a71807-e2fe-4600-b561-120bd1f43f75">     
                 <textarea name="message" placeholder="Leave a Wedding wishes"></textarea>
                 <button type="submit">Send</button>
             </form>
